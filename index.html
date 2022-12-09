@@ -1,0 +1,305 @@
+<html lang="it" dir="ltr"><head>
+    <title>Prenotazione mensa Scuola Superiore Sant'Anna - Dashboard personale</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+            <meta http-equiv="REFRESH" content="1800;URL=logout.php?redirect=%2FWeb%2Fdashboard.php">
+        <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico">
+    <!-- JavaScript -->
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    <!-- End JavaScript -->
+
+    <!-- CSS -->
+            <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css" type="text/css">
+                                            <link rel="stylesheet" type="text/css" href="scripts/js/owl-2.2.1/assets/owl.carousel.min.css?v=2.8.3">
+        <link rel="stylesheet" type="text/css" href="scripts/js/owl-2.2.1/assets/owl.theme.default.css?v=2.8.3">
+    
+    <script type="text/javascript" src="scripts/js/jquery-ui-timepicker-addon.js?v=2.8.3"></script>
+    <link rel="stylesheet" type="text/css" href="scripts/css/jquery-ui-timepicker-addon.css?v=2.8.3">
+    <link rel="stylesheet" type="text/css" href="css/booked.css?v=2.8.3">
+                <link rel="stylesheet" type="text/css" href="css/null-style.css?v=2.8.3">
+        
+        <!-- End CSS -->
+</head>
+<body class="vsc-initialized">
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#booked-navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="dashboard.php"><img src="img/custom-logo.png?2.8.3" title="Prenotazione mensa Scuola Superiore Sant'Anna - Dashboard personale" alt="Prenotazione mensa Scuola Superiore Sant'Anna - Dashboard personale" class="logo"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="booked-navigation">
+                <ul class="nav navbar-nav">
+                                            <li id="navDashboard"><a href="dashboard.php">Dashboard</a></li>
+                        <li class="dropdown" id="navMyAccountDropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account personale <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li id="navProfile"><a href="profile.php">Profilo</a></li>
+                                <li id="navPassword"><a href="password.php">Cambia password</a></li>
+                                <li id="navNotification">
+                                    <a href="notification-preferences.php">Preferenze di notifica</a>
+                                </li>
+                                                                    <li id="navInvitations">
+                                        <a href="participation.php">Inviti aperti</a>
+                                    </li>
+                                                                                            </ul>
+                        </li>
+                        <li class="dropdown" id="navScheduleDropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Calendario <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li id="navBookings"><a href="schedule.php">Prenotazioni</a>
+                                </li>
+                                <li id="navMyCalendar"><a href="my-calendar.php">Calendario prenotazioni personali</a></li>
+                                <li id="navResourceCalendar"><a href="calendar.php">Calendario risorse</a></li>
+                                <!--<li class="menuitem"><a href="#">?</a></li>-->
+                                <li id="navFindATime"><a href="search-availability.php">Trova una disponibilità</a>
+                                </li>
+                                <li id="navFindATime"><a href="search-reservations.php">Cerca Prenotazioni</a>
+                                </li>
+                            </ul>
+                        </li>
+                                                                                            
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                                                            <li class="dropdown" id="navHelpDropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aiuto <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li id="navHelp"><a href="https://www.bookedscheduler.com/help/usage">Aiuto</a></li>
+                                                        <li id="navAbout"><a href="help.php?ht=about">Informazioni su</a></li>
+                        </ul>
+                    </li>
+                                            <li id="navSignOut"><a href="logout.php">Disconnetti</a></li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+
+<div id="main" class="container-fluid">
+
+
+<div id="page-dashboard">
+	<div id="dashboardList">
+					<div>
+<div class="dashboard" id="announcementsDashboard">
+	<div class="dashboardHeader">
+		<div class="pull-left">Avvisi <span class="badge">0</span></div>
+		<div class="pull-right">
+			<a href="#" title="Mostra/Nascondi Avvisi">
+				<i class="glyphicon glyphicon-chevron-up"></i>
+                <span class="no-show">Expand/Collapse</span>
+            </a>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="dashboardContents">
+		<ul>
+			
+				<div class="noresults">Non ci sono avvisi</div>
+			
+		</ul>
+	</div>
+</div>
+</div>
+					<div>
+
+
+<div class="dashboard upcomingReservationsDashboard" id="upcomingReservationsDashboard">
+	<div class="dashboardHeader">
+		<div class="pull-left">Prenotazioni imminenti <span class="badge">1</span></div>
+		<div class="pull-right">
+			<a href="#" title="Mostra/Nascondi Prenotazioni imminenti">
+				<i class="glyphicon glyphicon-chevron-up"></i>
+                <span class="no-show">Expand/Collapse</span>
+            </a>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="dashboardContents">
+							<div>
+				<div class="timespan">
+					Oggi (1)
+				</div>
+				                    <div class="reservation row " id="6390d91c0ed66904492256" data-hasqtip="0">
+    <div class="col-sm-3 col-xs-12">(nessuna nota)</div>
+    <div class="col-sm-2 col-xs-12">Simone Gallo </div>
+    <div class="col-sm-2 col-xs-6">Mercoledì, 07/12/2022 20:15</div>
+    <div class="col-sm-2 col-xs-6">Mercoledì, 07/12/2022 20:30</div>
+    <div class="col-sm-3 col-xs-12">Turno Cena</div>
+            <div class="clearfix"></div>
+</div>
+<div id="wait-box" class="wait-box">
+	<div id="creatingNotification">
+		<h3>
+			
+				Elaborazione in corso......
+			
+		</h3>
+		<img src="img/reservation_submitting.gif" title="" alt="">
+	</div>
+	<div id="result"></div>
+</div>
+
+				
+
+				<div class="timespan">
+					Domani (0)
+				</div>
+				
+
+				<div class="timespan">
+					Questo fine settimana (0)
+				</div>
+				
+
+				<div class="timespan">
+					Prossima settimana (0)
+				</div>
+				
+			</div>
+			</div>
+
+	<form id="form-checkin" method="post">
+		<input type="hidden" id="referenceNumber" name="referenceNumber">
+		<input type="hidden" id="csrf_token" name="CSRF_TOKEN" value="ZDAzZmEyOTI5NTYzNGFiNTQ2NWM5NTU1Mjc3NTAxYzk=">
+	</form>
+
+    
+		
+		
+	
+</div>
+</div>
+					<div>
+
+<div class="dashboard dashboard availabilityDashboard" id="availabilityDashboard">
+    <div class="dashboardHeader">
+        <div class="pull-left">Disponibilità&nbsp; delle risorse</div>
+        <div class="pull-right">
+            <a href="#" title="Mostra/Nascondi Disponibilità&nbsp; delle risorse">
+                <i class="glyphicon glyphicon-chevron-up"></i>
+                <span class="no-show">Expand/Collapse</span>
+            </a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="dashboardContents">
+        <div class="header">Disponibile</div>
+                                            <h5>Cena</h5>
+                            <div class="availabilityItem">
+                    <div class="col-xs-12 col-sm-5">
+                        <i resource-id="69" class="resourceNameSelector fa fa-info-circle" resource-details-bound="1"></i>
+                        <div class="resourceName" style="background-color:;color:;">
+                            <a href="reservation.php?rid=69" resource-id="69" class="resourceNameSelector" style="color:" resource-details-bound="1">Turno Cena</a>
+                        </div>
+                    </div>
+                    <div class="availability col-xs-12 col-sm-4">
+                                                    Disponibile fino a
+                            Mercoledì, 07/12/2022 19:30
+                                            </div>
+                    <div class="reserveButton col-xs-12 col-sm-3">
+                        <a class="btn btn-xs col-xs-12" href="reservation.php?rid=69">Prenota</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                
+                                                                                        <h5>Pranzo</h5>
+                            <div class="availabilityItem">
+                    <div class="col-xs-12 col-sm-5">
+                        <i resource-id="68" class="resourceNameSelector fa fa-info-circle" resource-details-bound="1"></i>
+                        <div class="resourceName" style="background-color:;color:;">
+                            <a href="reservation.php?rid=68" resource-id="68" class="resourceNameSelector" style="color:" resource-details-bound="1">Turno Pranzo</a>
+                        </div>
+                    </div>
+                    <div class="availability col-xs-12 col-sm-4">
+                                                    Disponibile fino a
+                            Giovedì, 08/12/2022 12:30
+                                            </div>
+                    <div class="reserveButton col-xs-12 col-sm-3">
+                        <a class="btn btn-xs col-xs-12" href="reservation.php?rid=68">Prenota</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                
+                                                                                    
+
+        <div class="header">Non disponibile</div>
+
+                                                                                                                                                                        
+
+        <div class="header">Indisponibile per tutto il giorno</div>
+                                                                                                                                                                        
+    </div>
+</div></div>
+		
+	</div>
+
+    
+    
+            
+    
+            
+    
+            
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.16.3/lodash.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.50/jquery.form.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.66.0-2013.10.09/jquery.blockUI.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
+        
+        <script type="text/javascript" src="scripts/js/owl-2.2.1/owl.carousel.min.js?v=2.8.3"></script>
+<script type="text/javascript" src="scripts/phpscheduleit.js?v=2.8.3"></script>
+
+	<script type="text/javascript" src="scripts/dashboard.js?v=2.8.3"></script>
+	<script type="text/javascript" src="scripts/resourcePopup.js?v=2.8.3"></script>
+	<script type="text/javascript" src="scripts/ajax-helpers.js?v=2.8.3"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			var dashboardOpts = {
+				reservationUrl: "reservation.php?rn=",
+				summaryPopupUrl: "ajax/respopup.php",
+				scriptUrl: 'https://mensa.santannapisa.it/Web'
+			};
+
+			var dashboard = new Dashboard(dashboardOpts);
+			dashboard.init();
+		});
+	</script>
+
+</div>
+
+
+
+	</div><!-- close main-->
+
+	<footer class="footer navbar">
+		© 2020 <a href="http://www.twinkletoessoftware.com">Twinkle Toes Software</a> <br><a href="http://www.bookedscheduler.com">Booked Scheduler v2.8.3</a>
+	</footer>
+
+
+	<script type="text/javascript">
+		init();
+		$.blockUI.defaults.css.border = 'none';
+		$.blockUI.defaults.css.top = '25%';
+
+	</script>
+
+	
+	
+<div id="resourceDetailsDiv"></div></body></html>
